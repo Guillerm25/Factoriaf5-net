@@ -19,7 +19,7 @@ namespace CarouselImagesApp.Controllers
             _context = context;
             _hostEnvironment = hostEnvironment;
         }
-        //Upload file
+        //Subir Archivo
         private string UploadedFile(CarouselSliders carouselSlider)
         {
             string fileName = null;
@@ -40,7 +40,7 @@ namespace CarouselImagesApp.Controllers
             return fileName;
         }
 
-        // GET: CarouselSliders
+        // GET: 
         public async Task<IActionResult> Index()
         {
             return View(await _context.Carousel.ToListAsync());
@@ -48,13 +48,13 @@ namespace CarouselImagesApp.Controllers
 
 
 
-        // GET: CarouselSliders/Create
+        // GET: /Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: CarouselSliders/Create
+        // POST: /Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("CarouselId,Name,Description,ImageFile")] CarouselSliders carousel)
@@ -72,7 +72,7 @@ namespace CarouselImagesApp.Controllers
             return View(carousel);
         }
 
-        // GET: CarouselSliders/Edit/5
+        // GET: /Edit
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -88,7 +88,7 @@ namespace CarouselImagesApp.Controllers
             return View(carousel);
         }
 
-        // POST: CarouselSliders/Edit/5
+        // POST: /Edit
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, CarouselSliders carousel)
@@ -130,7 +130,7 @@ namespace CarouselImagesApp.Controllers
             return View(carousel);
         }
 
-        // GET: CarouselSliders/Delete/5
+        // GET: /Delete
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -148,19 +148,19 @@ namespace CarouselImagesApp.Controllers
             return View(carousel);
         }
 
-        // POST: CarouselSliders/Delete/5
+        // POST: /Delete/
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var carousel = await _context.Carousel.FindAsync(id);
 
-            //delete from wwwroot/image
+            //Eliminar de la root
             var imagePath = Path.Combine(_hostEnvironment.WebRootPath, "image", carousel.ImageName);
             if (System.IO.File.Exists(imagePath))
                 System.IO.File.Delete(imagePath);
 
-            //delete the record
+            //delete
             _context.Carousel.Remove(carousel);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FactoriaF5", "CarouselImagesApp\FactoriaF5.csproj", "{2C7C9699-5B3F-4898-B82C-308AD3A77081}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestProject1", "TestProject1\TestProject1.csproj", "{E48A12EB-E964-442F-A22E-650A38F0E967}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C7C9699-5B3F-4898-B82C-308AD3A77081}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C7C9699-5B3F-4898-B82C-308AD3A77081}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C7C9699-5B3F-4898-B82C-308AD3A77081}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C7C9699-5B3F-4898-B82C-308AD3A77081}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E48A12EB-E964-442F-A22E-650A38F0E967}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E48A12EB-E964-442F-A22E-650A38F0E967}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E48A12EB-E964-442F-A22E-650A38F0E967}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E48A12EB-E964-442F-A22E-650A38F0E967}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6965CFEF-C159-484D-BA50-E04525A1B9A3}
+	EndGlobalSection
+EndGlobal
